@@ -90,12 +90,17 @@ export default function App() {
 							</TouchableOpacity>
 						))
 					) : (
-						<Text style={[tw`mx-auto text-xl mt-8 text-gray-400`, {}]}>
+						<Text style={[tw`mx-auto text-xl mt-8 text-gray-400 text-center`, {}]}>
 							Add a task to get started!
 						</Text>
 					)}
-					<Text style={[tw`text-sm italic mx-auto text-gray-400 my-4`]}>
-						Tip: Press + to add task and click on task to delete!
+					<Text
+						style={[
+							tw`text-sm italic mx-auto text-gray-400 my-4 text-center`,
+							{ maxWidth: "90%" },
+						]}
+					>
+						Tip: Press + to add task and long press on task to delete!
 					</Text>
 				</ScrollView>
 			</View>
