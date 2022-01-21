@@ -18,8 +18,8 @@ import Task from "./components/Task";
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: StatusBar.currentHeight,
-		backgroundColor: "#EEF2FF",
+		// paddingTop: StatusBar.currentHeight,
+		backgroundColor: "#2D4263",
 	},
 	view: {
 		width: "100%",
@@ -60,8 +60,23 @@ export default function App() {
 
 	return (
 		<View style={[tw`flex-1`, styles.container]}>
+			<StatusBar
+				// animated={true}
+				backgroundColor="#308ea8"
+				// barStyle={statusBarStyle}
+				// showHideTransition={statusBarTransition}
+				// hidden={hidden}
+			/>
 			<View style={[tw`h-full flex-1`]}>
-				<Text style={[tw`text-2xl font-bold px-4 py-2 text-white bg-blue-900`]}>
+				<Text
+					style={[
+						tw`text-2xl font-bold px-4 py-2 text-white`,
+						{
+							backgroundColor: "#C84B31",
+							borderTopWidth: 2,
+						},
+					]}
+				>
 					All Tasks
 				</Text>
 				<ScrollView style={[tw`flex`]}>
@@ -69,7 +84,7 @@ export default function App() {
 						taskList.map((item, index) => (
 							<TouchableOpacity
 								key={index}
-								onPress={() => handlePressDelete(index)}
+								onLongPress={() => handlePressDelete(index)}
 							>
 								<Task task={item} />
 							</TouchableOpacity>
@@ -88,7 +103,10 @@ export default function App() {
 			<KeyboardAvoidingView
 				behavior={Platform.OS === "ios" ? "padding" : "height"}
 				style={[
-					tw`flex flex-row justify-between z-50 bg-blue-300 p-4 items-center`,
+					tw`flex flex-row justify-between z-50 p-4 items-center`,
+					{
+						backgroundColor: "#308ea8",
+					},
 				]}
 			>
 				<TextInput

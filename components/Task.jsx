@@ -3,7 +3,7 @@ import tw from "tailwind-react-native-classnames";
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: "#CDDEFF",
+		backgroundColor: "#ECDBBA",
 		width: "90%",
 	},
 	square: {

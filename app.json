@@ -28,6 +28,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "A simple to-do list app",
+    "githubUrl": "https://github.com/TyagiDemon/Taches"
   }
 }
